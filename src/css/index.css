@@ -1,0 +1,76 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #6a11cb;
+  
+    background: linear-gradient( rgba(123, 157, 156, .25) 35%, rgba(123, 157, 156, 0));
+  }
+
+.navbar .nav-link {
+  position: relative;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #4da6ff;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #1a1a1a;     /* matte dark background */
+  border: 1px solid #333;                  /* remove flat border */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.6); /* soft shadow */
+  border-radius: 8px;            /* smooth corners */
+  color: #e0e0e0;
+  max-width: 600px; 
+  height: 500px;
+}
+
+.card:hover {
+  transform: translateY(-6px); /* lift up slightly */
+  box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+}
+
+.card-header,
+.card-footer {
+  border-color: #555; /* softer gray divider */
+}
+
+.image-container .carousel,
+.image-container .carousel-inner,
+.image-container .carousel-item {
+  width: 150%;         /* match your image’s max-width */
+  margin-left: -17rem; /* same offset you gave to the image */
+} 
+
+.image-container img {
+    width: 43%;
+    height: auto;
+    image-rendering: crisp-edges; /* keeps sharp edges */
+    /* Optional: add spacing from text */
+    margin-left: 37rem; 
+}
+
+.text-container {
+    /* Optional: control spacing from the image */
+    margin-left: 5rem;
+}
+
+/* Previous arrow (left) */
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234da6ff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+}
+
+/* Next arrow (right) */
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234da6ff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}

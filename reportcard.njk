@@ -1,0 +1,64 @@
+---
+layout: layouts/default.njk
+title: Report Card Page
+---
+<div class="container py-5">
+  <div class="row align-items-center">
+
+    <!-- Left Side: Screenshot Carousel -->
+    <div class="col-lg-6 pe-lg-7">
+      <div class="image-container">
+        <div id="screenshotCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- First image -->
+            <div class="carousel-item active">
+              <img src="/src/image/output_folder/elementary_process.png" class="img-fluid" alt="Trading Bot Screenshot 1">
+            </div>
+            <!-- Second image -->
+            <div class="carousel-item">
+              <img src="/src/image/output_folder/Secondary_process.png" class="img-fluid" alt="Trading Bot Screenshot 2">
+            </div>   
+          </div>
+
+          <!-- Carousel arrows -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#screenshotCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#screenshotCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side: Text -->
+    <div class="col-lg-6">
+      <div class="text-container text-light">
+        <h2 class="mb-3">Report Card Signing API</h2>
+        <p>
+         I developed a secure API designed to streamline the process of digitally signing report cards for school administrators. 
+         The system replaced manual file handling on shared network drives with a fully automated, SharePoint-integrated workflow.
+         It was built using Python and FastAPI. The solution connected to Microsoft Graph API and Azure Active Directory to authenticate users and access the appropriate SharePoint directories. 
+         The API automatically identified the reporting term, applied the correct digital signature for each administrator, and generated signed copies of report cards in designated SharePoint folders.
+         Access control was managed through existing Active Directory security groups, ensuring data confidentiality and compliance. 
+         Administrators received email notifications once their signed documents were ready.
+        </p>
+
+        <h5 class="mt-4">Technologies used</h5>
+        <ul>
+          <li>Python</li>
+          <li>FastAPI</li>
+          <li>SharePoint</li>
+          <li>Uvicorn</li>
+          <li>Microsoft SQL Server</li>
+          <li>Microsoft Teams</li>
+          <li>ServiceNow</li>
+          <li>Azure Active Dirctory</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
