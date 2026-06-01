@@ -1,70 +1,78 @@
 ---
 layout: layouts/default.njk
-title: First Page
+title: Nathaniel Mais — Portfolio
 ---
 
-<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
-  <div class="card text-center" style="width: 100%; max-width: 800px; height: auto;">
-    <div class="card-header">
-      <h1 class="mb-1">Nathaniel Mais</h1>
-      <p class="mb-1">Full-Stack Software Developer</p>
-    </div>
+<style>
+  .h1-wrap { max-width: 1100px; margin: 0 auto; padding: 3.5rem 1rem 1rem; text-align: center; }
+  .h1-eyebrow { color: #4da6ff; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; font-weight: 600; }
+  .h1-name { font-size: clamp(2.2rem, 6vw, 3.4rem); font-weight: 800; line-height: 1.05; margin: .5rem 0 .35rem; }
+  .h1-role { color: #cfd3d7; font-size: 1.15rem; margin-bottom: 1.25rem; }
+  .h1-about { color: #c2c2c2; max-width: 65ch; margin: 0 auto; line-height: 1.75; }
+  .h1-meta { display: flex; flex-wrap: wrap; gap: 1.5rem 2.5rem; justify-content: center; margin: 1.75rem 0 .25rem; text-align: left; }
+  .h1-meta div { max-width: 320px; }
+  .h1-meta h4 { color: #4da6ff; font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: .35rem; }
+  .h1-meta p { color: #cfcfcf; margin: 0; font-size: .92rem; line-height: 1.5; }
+  .h1-pills { display: flex; flex-wrap: wrap; gap: .45rem; justify-content: center; margin-top: 1.75rem; }
+  .h1-projects { max-width: 1100px; margin: 0 auto; padding: 3.5rem 1rem 5rem; scroll-margin-top: 1rem; }
+  .h1-projects h2 { font-weight: 700; margin-bottom: 1.5rem; }
+</style>
 
-    <div class="row mt-3">
-      <!-- Education Column -->
-      <div class="col-md-6 text-start">
-        <h4 class="fw-semibold">Education</h4>
-        <hr>
-         <ul>
-          <li>
-          <strong>Durham College</strong>
-          <br>
-          Computer Programming & Analysis Advanced Diploma Graduate
-          <br>
-          Sept 2022 - April 2025
-          </li>
-        </ul>
+<div class="h1-wrap">
+  <p class="h1-eyebrow">Full-Stack Software Developer</p>
+  <h1 class="h1-name">Nathaniel <span class="sh-accent">Mais</span></h1>
+  <p class="h1-role">I build meaningful software — from quant trading systems to secure enterprise APIs.</p>
+  <p class="h1-about">
+    A passionate software developer who loves creating valuable software that genuinely helps people. I've
+    contributed to a report-card signing API used across the Durham District School Board and built an algorithmic
+    trading platform that analyzes the futures markets in real time. I thrive where creativity and problem-solving
+    matter most.
+  </p>
+
+  <div class="h1-meta">
+    <div>
+      <h4>Education</h4>
+      <p>Durham College — Computer Programming &amp; Analysis Advanced Diploma (Sept 2022 – Apr 2025)</p>
+    </div>
+    <div>
+      <h4>Experience</h4>
+      <p>Durham District School Board — Software Development Intern (Apr 2025 – May 2025)</p>
+    </div>
+    <div>
+      <h4>Interests</h4>
+      <p>Financial markets algorithms, software development, video games</p>
+    </div>
+  </div>
+
+  <div class="h1-pills sh-tech">
+    <span>Python</span><span>JavaScript</span><span>C#</span><span>Java</span>
+    <span>React</span><span>Node.js</span><span>FastAPI</span><span>MongoDB</span><span>Git</span><span>Docker</span>
+  </div>
+</div>
+
+<div class="h1-projects" id="projects">
+  <h2>Projects</h2>
+  <div class="pj-grid">
+    <a href="/trade" class="pj-card">
+      <img src="/src/image/combined_4way_curve.png" alt="Custom Python Trading Platform">
+      <div class="pj-body">
+        <h3>Custom Python Trading Platform</h3>
+        <p>Quantitative NQ-futures platform — tick-level order-flow analysis, ML regime classification, and live execution across NinjaTrader 8 &amp; MetaTrader 5.</p>
       </div>
-
-      <!-- Interests Column -->
-      <div class="col-md-6 text-start">
-        <h4 class="fw-semibold">Interests</h4>
-        <hr>
-        <ul>
-          <li>Day Trading</li>
-          <li>Video Games</li>
-          <li>Software Development</li>
-        </ul>
-        <!-- Experience Section -->
-        <h4 class="fw-semibold">Professional Experience</h4>
-        <hr>
-        <ul>
-          <li>
-          <strong>Durham District School Board</strong>
-          <br>
-          Software Development Intern
-          <br>
-          Apr 2025 - May 2025
-          </li>
-        </ul>
+    </a>
+    <a href="/jobsite" class="pj-card">
+      <img src="/src/image/jobs_page.png" alt="Get Hired">
+      <div class="pj-body">
+        <h3>Get Hired</h3>
+        <p>A job-application portal with secure profiles, resume uploads, and application tracking — built on Node/Express and MongoDB.</p>
       </div>
-    </div>
-
-    
-
-    <div class="card-body">
-      <h5 class="card-title">About Me</h5>
-      <p class="card-text">Hello, and thanks for visiting my page! Here's a quick summary about me.</p>
-      <p class="card-text"> I'm a passionate and experienced software developer that loves creating meaningful valuable software that can truly help people.
-        This passion led me to contribute to developing a report card signing API used by teachers and principals across the Durham District School Board. It also led me to build
-        an algorithmic trading backtester and bot that identifies trends in the financial markets using historical data and optimizes entry and exit points to maximize long-term profitability.
-        These are some of the experiences that allowed me to learn that I thrive in environments where creativity and problem solving matter most .
-      </p>
-      
-    </div>
-
-    <div class="card-footer text-light">
-      
-    </div>
+    </a>
+    <a href="/reportcard" class="pj-card">
+      <img src="/src/image/output_folder/elementary_process.png" alt="Report Card Signing API">
+      <div class="pj-body">
+        <h3>Report Card Signing API</h3>
+        <p>A secure FastAPI service that automates digital report-card signing via SharePoint and Azure Active Directory.</p>
+      </div>
+    </a>
   </div>
 </div>

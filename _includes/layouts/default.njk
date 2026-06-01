@@ -10,14 +10,14 @@
   <body class="bg-dark text-light">
      <nav class="navbar navbar-expand-lg" style="background-color:#0d0d0d;">
       <div class="container">
-        <a class="nav-link active text-light" aria-current="page" href="/portfolio">Portfolio</a>
+        <a class="navbar-brand text-light fw-semibold" href="/">Nathaniel Mais</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active text-light" aria-current="page" href="/">Home</a> 
+              <a class="nav-link active text-light" aria-current="page" href="/">Home</a>
             </li>
           </ul>
         </div>
@@ -28,7 +28,20 @@
       {{ content | safe }}
     </div>
 
+    <!-- Shared click-to-zoom lightbox (acts on any <img data-zoom>) -->
+    <div class="lb" id="lightbox"><img id="lbimg" src="" alt=""></div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script>
+      (function () {
+        var lb = document.getElementById('lightbox'), lbimg = document.getElementById('lbimg');
+        if (!lb) return;
+        document.querySelectorAll('[data-zoom]').forEach(function (img) {
+          img.addEventListener('click', function () { lbimg.src = img.src; lb.classList.add('show'); });
+        });
+        lb.addEventListener('click', function () { lb.classList.remove('show'); });
+        document.addEventListener('keydown', function (e){ if (e.key === 'Escape') lb.classList.remove('show'); });
+      })();
+    </script>
   </body>
 </html>

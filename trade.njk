@@ -3,59 +3,44 @@ layout: layouts/default.njk
 title: Trading Page
 ---
 
-<div class="container py-5">
-  <div class="row align-items-center">
-
-    <!-- Left Side: Screenshot Carousel -->
-    <div class="col-12 col-lg-6 pe-lg-4 mb-4 mb-lg-0">
-      <div class="image-container">
-        <div id="screenshotCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <!-- First image -->
-            <div class="carousel-item active">
-              <img src="/src/image/pnl_graph.png" class="img-fluid" alt="Trading Bot Screenshot 1">
-            </div>
-            <!-- Second image -->
-            <div class="carousel-item">
-              <img src="/src/image/performance_data.png" class="img-fluid" alt="Trading Bot Screenshot 2">
-            </div>
-            
-          </div>
-
-          <!-- Carousel arrows -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#screenshotCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#screenshotCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
+<div class="sh-hero">
+  <div>
+    <h1>Custom Python <span class="sh-accent">Trading Platform</span></h1>
+    <p>
+      A quantitative trading platform for Nasdaq-100 futures built on tick-level order-flow analysis — volume
+      profile, anchored VWAP, range bars and a six-method absorption detector, with Gaussian-HMM regime
+      classification. It backtests through a Streamlit research framework and Monte Carlo prop-firm simulators,
+      then runs live: four concurrent strategies, coordinated under a no-hedge rule, executing across NinjaTrader 8
+      and MetaTrader 5 with heartbeat failsafes and per-account risk management.
+    </p>
+    <div class="sh-tech">
+      <span>Python</span><span>Databento</span><span>pandas · NumPy · Polars</span>
+      <span>scikit-learn · hmmlearn</span><span>Streamlit · Plotly</span>
+      <span>NinjaTrader 8 · C#</span><span>MetaTrader 5</span>
     </div>
+  </div>
+  <figure class="sh-herofig m-0">
+    <img src="/src/image/combined_4way_curve.png" data-zoom alt="Combined 4-strategy equity curve">
+  </figure>
+</div>
 
-    <!-- Right Side: Text -->
-    <div class="col-12 col-lg-6">
-      <div class="text-container text-light">
-        <h2 class="mb-3">Open Range Breakout Bot / Backtester</h2>
-        <p>
-          This desktop software is designed to backtest futures markets and execute trades in real time. 
-          It was built using NinjaScript, a C#-based language specifically for trading that runs on the .NET framework. 
-          Users can run historical backtests on any futures market to evaluate performance, 
-          or attach the strategy to a live chart and configure parameters such as the number of contracts, 
-          profit targets, and stop losses.
-        </p>
-
-        <h5 class="mt-4">Technologies used</h5>
-        <ul>
-          <li>C#</li>
-          <li>NinjaTrader 8</li>
-          <li>.NET Framework</li>
-          <li>NinjaTrader API (Cbi, Data, NinjaScript, Gui.Tools)</li>
-        </ul>
-      </div>
+<div class="sh-band">
+  <div class="sh-band-inner">
+    <h2>System Architecture</h2>
+    <p class="sh-sub">Real-time, fault-tolerant, dual-broker execution — click any diagram to enlarge.</p>
+    <div class="sh-grid">
+      <figure class="sh-card m-0">
+        <img src="/src/image/architecture_dataflow.svg" data-zoom alt="Data-flow architecture">
+        <figcaption><b>Data flow.</b> Databento live feed → bar builder → four strategy engines → no-hedge coordinator → NinjaTrader 8 &amp; MetaTrader 5.</figcaption>
+      </figure>
+      <figure class="sh-card m-0">
+        <img src="/src/image/architecture_resilience.svg" data-zoom alt="Resilience architecture">
+        <figcaption><b>Resilience.</b> Each pipeline stage mapped to its failure mode and recovery mechanism.</figcaption>
+      </figure>
+      <figure class="sh-card m-0" style="grid-column: 1 / -1;">
+        <img src="/src/image/futures_50k_mc_distribution.png" data-zoom alt="Monte Carlo distribution">
+        <figcaption><b>Risk modeling.</b> Monte Carlo prop-firm simulation — 300 equity paths and days-to-pass distribution (66.8% pass rate, median 58 days).</figcaption>
+      </figure>
     </div>
-
   </div>
 </div>

@@ -3,68 +3,38 @@ layout: layouts/default.njk
 title: Jobsite Page
 ---
 
-<div class="container py-5">
-  <div class="row align-items-center">
-
-    <!-- Left Side: Screenshot Carousel -->
-    <div class="col-12 col-lg-6 pe-lg-4 mb-4 mb-lg-0">
-      <div class="image-container">
-        <div id="screenshotCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <!-- First image -->
-            <div class="carousel-item active">
-              <img src="/src/image/jobs_page.png" class="img-fluid" alt="Trading Bot Screenshot 1">
-            </div>
-            <!-- Second image -->
-            <div class="carousel-item">
-              <img src="/src/image/personal_info_page.png" class="img-fluid" alt="Trading Bot Screenshot 2">
-            </div>
-            <!-- Third image -->
-            <div class="carousel-item">
-              <img src="/src/image/resume_upload_page.png" class="img-fluid" alt="Trading Bot Screenshot 2">
-            </div>
-            
-          </div>
-
-          <!-- Carousel arrows -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#screenshotCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#screenshotCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
+<div class="sh-hero">
+  <div>
+    <h1>Get <span class="sh-accent">Hired</span></h1>
+    <p>
+      A job-application portal built to make the Durham College hiring experience more user-friendly and efficient.
+      Users sign up with their details securely stored and passwords hashed, then log in to build a profile, upload
+      a resume, apply for open positions, and track which jobs they have applied to. It was built with Eleventy and
+      Nunjucks on the front end and a Node/Express back end backed by MongoDB.
+    </p>
+    <div class="sh-tech">
+      <span>JavaScript</span><span>Node.js</span><span>Express</span><span>MongoDB</span>
+      <span>Eleventy (11ty)</span><span>Nunjucks</span><span>Bootstrap</span><span>HTML · CSS</span>
     </div>
+  </div>
+  <figure class="sh-herofig m-0">
+    <img src="/src/image/jobs_page.png" data-zoom alt="Get Hired job listings page">
+  </figure>
+</div>
 
-    <!-- Right Side: Text -->
-    <div class="col-12 col-lg-6">
-      <div class="text-container text-light">
-        <h2 class="mb-3">Get Hired</h2>
-        <p>
-         This website was created to make the Durham College Hired Portal more user-friendly and efficient. 
-         It was built using 11ty, Nunjucks, and JavaScript, with MongoDB integration for data storage. 
-         Users can sign up, with their information securely stored in the database and passwords hashed. 
-         They can also log in, apply for jobs, and track which positions they have applied to.
-        </p>
-
-        <h5 class="mt-4">Technologies used</h5>
-        <ul>
-          <li>Nunjucks</li>
-          <li>HTML</li>
-          <li>JSON</li>
-          <li>11ty</li>
-          <li>CSS</li>
-          <li>Bootstrap</li>
-          <li>MongoDB</li>
-          <li>JavaScript</li>
-          <li>Node.js</li>
-          <li>Express</li>
-        </ul>
-      </div>
+<div class="sh-band">
+  <div class="sh-band-inner">
+    <h2>Application Flow</h2>
+    <p class="sh-sub">Sign up, build a profile, and apply — click any screen to enlarge.</p>
+    <div class="sh-grid">
+      <figure class="sh-card m-0">
+        <img src="/src/image/personal_info_page.png" data-zoom alt="Personal information page">
+        <figcaption><b>Profile.</b> Users create an account and manage their personal information, securely stored with hashed passwords.</figcaption>
+      </figure>
+      <figure class="sh-card m-0">
+        <img src="/src/image/resume_upload_page.png" data-zoom alt="Resume upload page">
+        <figcaption><b>Apply.</b> Applicants upload a resume and apply to open positions, with their applications tracked in MongoDB.</figcaption>
+      </figure>
     </div>
-
   </div>
 </div>
